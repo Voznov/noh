@@ -1,19 +1,16 @@
 #pragma once
 #include "Camera.h"
 
+#include <GL/glew.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
 class PerspectiveCamera : public Camera {
 public:
-	PerspectiveCamera(float fov = 45.0f, float aspect = 1.0f, float near = 0.0f, float far = 100.0f);
+	PerspectiveCamera(GLfloat fov = 45.0f, GLfloat aspect = 1.0f, GLfloat near = 0.0f, GLfloat far = 100.0f);
 
 	glm::mat4 getProjection();
 
-	float fov;
-	float aspect;
-	float near;
-	float far;
+	GLfloat fov, aspect, near, far;
 };
-

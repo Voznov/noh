@@ -1,5 +1,6 @@
 .vs/
+.vscode/
 Debug/
-.Release/
+Release/
 *.filters
 *.user
